@@ -7,7 +7,7 @@
  * @since 1.0
  */
 
-namespace QTheme;
+namespace rfseTheme;
 
 /**
  * Styles handler.
@@ -21,7 +21,7 @@ class Styles {
 	 * @since 1.0
 	 * @var array
 	 */
-	protected $styles = [
+	protected $styles = array(
 		'base',
 		'typography',
 		'layout',
@@ -29,7 +29,7 @@ class Styles {
 		'comment-form',
 		'forms',
 		'colors',
-	];
+	);
 
 	/**
 	 * Webfonts URLs.
@@ -38,9 +38,9 @@ class Styles {
 	 * @since 1.0
 	 * @var array
 	 */
-	protected $webfonts = [
+	protected $webfonts = array(
 		'https://fonts.googleapis.com/css2?family=Literata:wght@200..900&display=optional',
-	];
+	);
 
 	/**
 	 * Constructor.
@@ -51,9 +51,9 @@ class Styles {
 	public function __construct() {
 		require_once get_theme_file_path( 'includes/wptt-webfont-loader.php' );
 
-		add_action( 'wp_head', [ $this, 'head' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, 'block_editor_assets' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'wp_head', array(  $this, 'head' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_assets' ) );
+		add_action( 'wp_enqueue_scripts', array(  $this, 'enqueue_scripts' ) );
 	}
 
 	/**

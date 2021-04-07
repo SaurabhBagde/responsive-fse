@@ -7,7 +7,7 @@
  * @since 1.0
  */
 
-namespace QTheme;
+namespace rfseTheme;
 
 /**
  * Scripts handler.
