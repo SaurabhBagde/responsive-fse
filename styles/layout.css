@@ -131,14 +131,6 @@ header .wp-block-template-part.wp-block-column:nth-child(n) {
 }
 
 
-/* Hide the menu on small screens when JavaScript is available. */
-/* .wp-block-navigation ul,
-.wp-block-navigation .menu-item-has-children > a > .icon,
-.wp-block-navigation .page_item_has_children > a > .icon,
-.wp-block-navigation ul a > .icon {
-	display: none;
-} */
-
 .wp-block-navigation.toggled-on > ul {
 	display: block;
 }
