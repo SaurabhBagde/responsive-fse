@@ -13,3 +13,6 @@
 .has-dark-background-color {
     background-color: var(--wp--preset--color--dark);
 }
+.has-light-black-background-color {
+    background-color: var(--wp--preset--color--light-black);
+}

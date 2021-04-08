@@ -30,19 +30,21 @@ add_action(
 		// Support a custom color palette.
 		add_theme_support(
 			'editor-color-palette',
-			[
-				[
+			array(
+				array(
 					'name'  => __( 'Dark', 'q' ),
 					'slug'  => 'dark',
 					'color' => '#000000',
-				],
-				[
+				),
+				array(
 					'name'  => __( 'Light', 'q' ),
 					'slug'  => 'light',
 					'color' => '#f5f7f9',
-				],
-			]
+				),
+			)
 		);
+
+		add_theme_support( 'custom-units', 'px', 'em', 'rem', 'vh', 'vw' );
 	}
 );
 
@@ -63,7 +65,7 @@ add_filter(
 	'the_title',
 	function( $title ) {
 		if ( ! is_admin() && empty( $title ) ) {
-			$title = __( '(no title)', 'q' );
+			$title = __( '(no title)', 'rfse' );
 		}
 
 		return $title;
@@ -72,8 +74,8 @@ add_filter(
 
 // Add global styles.
 require_once 'includes/Styles.php';
-new \QTheme\Styles();
+new \rfseTheme\Styles();
 
 // Add scripts.
 require_once 'includes/Scripts.php';
-new \QTheme\Scripts();
+new \rfseTheme\Scripts();
