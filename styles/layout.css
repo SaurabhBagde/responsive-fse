@@ -37,7 +37,6 @@
 .alignleft,
 .wp-site-blocks .wp-block-post-content .alignleft {
 	float: left;
-
 	/* margin-left: calc(50% - var(--wp--custom--content--default-width) / 2); */
 	margin-right: 1em;
 }
@@ -98,6 +97,7 @@ End fix for bug: https://github.com/WordPress/gutenberg/issues/25610
 }
 .wp-block-site-title a{
 	font-size: var(--wp--preset--font-size--medium);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	color: var(--header-text-color);
 }
 .wp-block-site-title a:hover{
@@ -171,6 +171,7 @@ header .wp-block-template-part.wp-block-column:nth-child(n) {
 	color: var(--header-text-color);
 	text-decoration: none;
 	font-size : var(--wp--preset--font-size--normal);
+	font-weight: 400;
 }
 
 .wp-block-navigation ul a:hover,
@@ -343,11 +344,11 @@ header .wp-block-template-part.wp-block-column:nth-child(n) {
 }
 
 /* Entry Content */
-.wp-block-query-loop li .wp-block-columns{
+.wp-block-query-loop .wp-block-columns{
 	margin: 7px 0;
 }
 
-.wp-block-query-loop li .wp-block-columns .wp-block-column{
+.wp-block-query-loop .wp-block-columns .wp-block-column{
 	margin: 0;
 }
 
@@ -418,9 +419,10 @@ header .wp-block-template-part.wp-block-column:nth-child(n) {
 	font-weight: normal;
 	text-transform: uppercase;
 }
+.wp-site-blocks .wp-block-post-hierarchical-terms a,
 .wp-block-post-hierarchical-terms a {
 	font-size: inherit;
-	font-weight: normal;
+	font-weight: 400;
 	color: #999;
 	text-transform: uppercase;
 }
@@ -438,38 +440,35 @@ header .wp-block-template-part.wp-block-column:nth-child(n) {
 .wp-block-column.sidebar {
 	padding: 0 15px;
 }
+.wp-block-column.sidebar .wp-block-columns {
+	margin-bottom: 0;
+}
+.wp-block-column.sidebar .wp-block-columns p:empty{
+	display: none;
+}
 .sidebar .wp-block-search {
 	padding: 30px;
 	margin-bottom: 30px;
 	background-color: var(--wp--preset--color--white);
 }
-
-.sidebar .wp-block-latest-posts__list{
+.sidebar .wp-block-search__button {
+	background-color: var(--wp--preset--color--white);
+	border: none;
+}
+.sidebar .wp-block-template-part > .wp-block-columns > .wp-block-column{
 	font-size: 13px;
 	padding: 30px;
 	margin-bottom: 30px;
 	background-color: var(--wp--preset--color--white);
 }
-
-.sidebar .wp-block-latest-comments {
-	font-size: 13px;
-	padding: 30px;
-	margin-bottom: 30px;
-	background-color: var(--wp--preset--color--white);
+.sidebar .wp-block-template-part > .wp-block-columns > .wp-block-column h2 {
+	margin-top: 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.sidebar .wp-block-archives-list {
-	font-size: 13px;
-	padding: 30px;
-	margin-bottom: 30px;
-	background-color: var(--wp--preset--color--white);
-}
-
-.sidebar .wp-block-categories-list {
-	font-size: 13px;
-	padding: 30px;
-	margin-bottom: 30px;
-	background-color: var(--wp--preset--color--white);
+.sidebar ul,
+.sidebar ol {
+	padding: 0;
 }
 
 .sidebar  li {
